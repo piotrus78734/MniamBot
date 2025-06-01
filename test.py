@@ -9,7 +9,7 @@ device.clear()
 
 image = Image.new("1", device.size)
 draw = ImageDraw.Draw(image)
-draw.text((10, 10), "Hello OLED!", fill=255)
+draw.text((20, 10), "Hello OLED!", fill=255)
 
 device.display(image)
 time.sleep(20)
