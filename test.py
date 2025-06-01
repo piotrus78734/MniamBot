@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw
 from luma.core.interface.serial import i2c
 from luma.oled.device import ssd1306
-
+import time
 serial = i2c(port=1, address=0x3C)
 device = ssd1306(serial)
 device.contrast(255)
@@ -12,3 +12,4 @@ draw = ImageDraw.Draw(image)
 draw.text((10, 10), "Hello OLED!", fill=255)
 
 device.display(image)
+time.sleep(20)
