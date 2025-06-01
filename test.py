@@ -5,7 +5,7 @@ from luma.oled.device import ssd1306
 serial = i2c(port=1, address=0x3C)
 device = ssd1306(serial)
 device.contrast(255)
-#device.clear()
+device.clear()
 
 image = Image.new("1", device.size)
 draw = ImageDraw.Draw(image)
